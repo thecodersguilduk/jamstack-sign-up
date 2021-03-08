@@ -242,14 +242,9 @@
                  "Prefer not to say",
                  "Other"
               ],
-              "required_message":"Please provide an answer"
-           },
-           "sexual_orientation_other":{
-              "type":"text",
-              "required":false,
-              "label":"If other",
-              "class":"wide",
-              "help":"If other please provide more information"
+              "required_message":"Please provide an answer",
+              "other":"Other",
+              "other_text":"Please enter your preferred pronoun"
            },
            "gender":{
               "type":"radio",
@@ -264,14 +259,8 @@
                  "Prefer not to say"
               ],
               "required_message":"Please provide an answer",
-              "other":"Please provide us with you preferred gender"
-           },
-           "gender_other":{
-              "type":"text",
-              "required":false,
-              "label":"If other",
-              "class":"wide",
-              "help":"Please provide us with you preferred gender"
+              "other":"Other",
+              "other_text":"Please enter your preferred pronoun"
            },
            "gender_reassignment":{
               "type":"radio",
@@ -320,7 +309,8 @@
               "help":"",
               "options":[
                  "Yes",
-                 "No"
+                 "No",
+                 "Unsure"
               ],
               "required_message":"Please provide an answer"
            },
