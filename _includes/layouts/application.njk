@@ -52,6 +52,7 @@
                                             {% set fieldID = name+'-'+option %}
                                             {% set fieldID = fieldID | replace(' ', '-', 50) %}
                                             {% set fieldID = fieldID | replace('/', '-', 50) %}
+                                            {% set fieldID = fieldID | replace('#', '', 50) %}
                                             {% set arrFields = (arrFields.push('#'+fieldID),arrFields) %}
                                             {% if option == field.other %}
                                                 {% set optionID = fieldID %}
@@ -67,7 +68,7 @@
                                         {% endfor %}  
                                         {% if field.other %}
                                             <div class="other other__{{name}}">
-                                                <p class="m-2 text-sm text-gray-500">{{field.other}}</p>
+                                                <p class="m-2 text-sm text-gray-500">{{field.other_text}}</p>
                                                 <input id="{{name}}_option_selected" name="{{name}}_option_selected" class="form-input mt-1 mb-1 block w-full placeholder-muted" {% if field.required_message %}required{%endif%} />
                                             </div>
                                             <script>
@@ -85,10 +86,12 @@
                                         {% endif %}
                                     {% case 'checkbox' %}
                                         {% set arrFields = [] %}
+                                        {% set optionID = '' %}
                                         {% for option in field.options %}
                                             {% set fieldID = name+'-'+option %}
                                             {% set fieldID = fieldID | replace(' ', '-', 50) %}
                                             {% set fieldID = fieldID | replace('/', '-', 50) %}
+                                            {% set fieldID = fieldID | replace('#', '', 50) %}
                                             {% set arrFields = (arrFields.push('#'+fieldID),arrFields) %}
                                             {% if option == field.other %}
                                                 {% set optionID = fieldID %}
@@ -118,7 +121,7 @@
                                         {% endfor %} 
                                         {% if field.other %}
                                             <div class="other other__{{name}}">
-                                                <p class="m-2 text-sm text-gray-500">{{field.other}}</p>
+                                                <p class="m-2 text-sm text-gray-500">{{field.other_text}}</p>
                                                 <input id="{{name}}_option_selected" name="{{name}}_option_selected" class="form-input mt-1 mb-1 block w-full placeholder-muted" {% if field.required_message %}required{%endif%} />
                                             </div>
                                             <script>

@@ -180,7 +180,7 @@
               ],
               "required_message":"Please provide an answer",
               "other":"Other ethnic group",
-              "other_text":"Provide examples seperated by commas"
+              "other_text":"Please provide us with your ethnicity"
            },
            "married":{
               "type":"radio",
@@ -244,7 +244,7 @@
               ],
               "required_message":"Please provide an answer",
               "other":"Other",
-              "other_text":"Please enter your preferred pronoun"
+              "other_text":"Please enter your sexual orientation"
            },
            "gender":{
               "type":"radio",
@@ -260,7 +260,7 @@
               ],
               "required_message":"Please provide an answer",
               "other":"Other",
-              "other_text":"Please enter your preferred pronoun"
+              "other_text":"Please enter your gender"
            },
            "gender_reassignment":{
               "type":"radio",
