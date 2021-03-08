@@ -6,7 +6,7 @@ jQuery(document).on("click", ".validateFormStepPrev", function(event) {
     jQuery(fieldset).removeClass('active');
     var allFieldsets = jQuery('.application-form--fieldset');
     nextFieldSet = fieldsetCounter - 1;
-    // console.log(allFieldsets);
+    console.log(allFieldsets);
     jQuery(allFieldsets[nextFieldSet]).addClass('active');
     scrollTo = jQuery(allFieldsets[nextFieldSet]).offset().top - 100;
     // console.log(allFieldsets[nextFieldSet]);
@@ -22,8 +22,14 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
     var fieldset = fieldsets[0];
     // console.log(fieldset);
     var fieldsetName = jQuery(fieldset).data('fieldset');
-    var validationInputData = objInputs[fieldsetName];
-    var validationInputs = objInputs[fieldsetName]['fields'];
+    // console.log(fieldsetName);
+    for(counter=0; counter < objInputs.length; counter++){
+        // console.log(objInputs[counter]);
+        if(objInputs[counter].name == fieldsetName){
+            var validationInputData = objInputs[counter];
+        }
+    }
+    var validationInputs = validationInputData['fields'];
     // console.log(objInputs);
     console.log(validationInputs);
     var objValues = {};
@@ -115,6 +121,9 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
                         case 'postcode':
                             blnValidation = isValidPostcode(inputValue);
                         break;
+                        case 'national_insurance':
+                            blnValidation = isValidateNationalInsurance(inputValue);
+                        break;
                         case 'email':
                             blnValidation = isValidateEmail(inputValue);
                         break;
@@ -174,7 +183,8 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
     if(currentStepValidation){
         var allFieldsets = jQuery('.application-form--fieldset');
         nextFieldSet = fieldsetCounter + 1;
-        // console.log(allFieldsets);
+        console.log(allFieldsets);
+        nextFieldSet = fieldsetCounter + 1;
         if(jQuery(event.target).hasClass('submitApplication')){
             jQuery('#applicationForm').submit();
         } else {
@@ -192,9 +202,9 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
         scrollToElement.focus();
     }
     
-    jQuery('html, body').animate({
-        scrollTop: scrollTo
-    }, 2000);
+    // jQuery('html, body').animate({
+    //     scrollTop: scrollTo
+    // }, 2000);
     // console.log(objValues);
     // var data = {
 	// 	'action': 'tcg_add_form_data',
@@ -218,7 +228,7 @@ function isValidateEmail(email) {
 
 function isValidateNationalInsurance(nationalInsurance) {
     const re = /^\s*[a-zA-Z]{2}(?:\s*\d\s*){6}[a-zA-Z]?\s*$/;
-    return re.test(String(email).toLowerCase());
+    return re.test(String(nationalInsurance).toLowerCase());
 }
 
 jQuery( document ).ready(function() {

@@ -199,3 +199,6 @@ body .text-black{
 article p{
 	margin-bottom:30px;
 }
+.other{
+	display:none;
+}
