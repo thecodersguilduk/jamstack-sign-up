@@ -1,20 +1,20 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://example.com/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "title": "JAMStack bootcamp sign up - The Coders Guild",
+  "url": "https://skills-bootcamp-jamstack.tcg.camp/",
+  "description": "JAMStack bootcamp, Javascript, APIs, Markup - Use this site to register your interest and learn about HTML, CSS, JS, Git and Markdown",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "JAMStack bootcamp, Javascript, APIs, Markup - Use this site to register your interest and learn about HTML, CSS, JS, Git and Markdown",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://example.com/"
+    "id": "https://skills-bootcamp-jamstack.tcg.camp/"
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://example.com/feed/feed.json"
+    "url": "https://skills-bootcamp-jamstack.tcg.camp/feed/feed.json"
   },
   "author": {
     "name": "Your Name Here",
     "email": "youremailaddress@example.com",
-    "url": "https://example.com/about-me/"
+    "url": "https://skills-bootcamp-jamstack.tcg.camp/about-me/"
   }
 }
