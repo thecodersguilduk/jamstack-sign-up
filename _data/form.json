@@ -316,6 +316,19 @@
               ],
               "required_message":"Please provide an answer"
            },
+           "residence":{
+              "type":"radio",
+              "required":true,
+              "label":"Do you have permanent residency in the UK?",
+              "class":"wide",
+              "help":"",
+              "options":[
+                 "Yes",
+                 "No",
+                 "Unsure"
+              ],
+              "required_message":"Please provide an answer"
+           },
            "occupation":{
               "type":"text",
               "required":false,
