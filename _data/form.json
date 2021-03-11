@@ -116,7 +116,7 @@
      {
         "name":"demographic_data",
         "label":"Demographic Data",
-        "help":"You don't _have_ to tell us this stuff but the DfE (who are paying for the course) have to ask it. All of this data will be held securely and will only be used for anoymous data processsing and evaluation. Feel free to leave out any questions you don't feel like answering and please don't let it put you off. For more details please see our privacy policy.",
+        "help":"The DfE (who are paying for the course) have to ask it. All of this data will be held securely and will only be used for anoymous data processsing and evaluation. Feel free to choose the prefer not to say option on any questions you don't feel like answering and please don't let it put you off. For more details please see our privacy policy.",
         "fields":{
            "education":{
               "type":"select",
