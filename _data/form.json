@@ -322,6 +322,14 @@
               "help":"What is your current job title (if applicable)",
               "required_message":"Please provide an answer"
            },
+           "employer":{
+              "type":"text",
+              "required":false,
+              "label":"Who is your current employer?",
+              "class":"wide",
+              "help":"Please enter the name of your current employer (if applicaple)",
+              "required_message":"Please provide an answer"
+           },
            "postcode":{
               "type":"text",
               "required":true,
