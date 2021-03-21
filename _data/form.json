@@ -303,6 +303,20 @@
               "other":"in training \/education",
               "other_text":"If you are studying, what are you studying and where?"
            },
+           "work_alongside":{
+              "type":"radio",
+              "required":true,
+              "label":"Do you plan to work alongside attending the bootcamp?",
+              "class":"wide",
+              "help":"",
+              "options":[
+                 "Yes full time employment",
+                 "Yes part time employment",
+                 "Yes self employed",
+                 "No"
+              ],
+              "required_message":"Please provide an answer"
+           },
            "employment_eligability":{
               "type":"radio",
               "required":true,
@@ -353,6 +367,13 @@
               "help":"",
               "required_message":"Please provide a valid postcode"
            },
+            "address":{
+               "type":"textarea",
+               "required":true,
+               "label":"What is your full residential address?",
+               "class":"wide",
+               "required_message":"Please provide an answer"
+            },
            "national_insurance":{
               "type":"text",
               "required":true,
@@ -418,6 +439,17 @@
                  "I have read and understand the <a href=\"https:\/\/thecodersguild.org.uk\/pdf\/tcg_privacy_policy.pdf\" target=\"_blank\">privacy policy<\/a>"
               ],
               "required_message":"You must confirm you have read and understood the privacy policy"
+           },
+           "dfe_opt_in":{
+              "type":"checkbox",
+              "required":false,
+              "label":"Dept for Education Research (opt in)",
+              "class":"wide",
+              "help":"Do you consent to being contacted by a third party research contractor (commissioned by DfE) to be invited to participate in interviews and surveys to help us understand your experience of the course and any improvements we can make to future courses? Participation in such research is entirely voluntary and consent can be withdrawn at any time.",
+              "options":[
+                 "Please tick the box if you are willing to be contacted."
+              ],
+              "required_message":""
            }
         }
      }
