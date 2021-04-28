@@ -330,6 +330,19 @@
               ],
               "required_message":"Please provide an answer"
            },
+           "provider":{
+            "type":"radio",
+            "required":true,
+            "label":"Course Provider",
+            "class":"first",
+            "help":"These courses are funded through your authority, please let us know which one",
+            "options":[
+               "Liverpool City Region",
+               "West Yorkshire Combined Authority",
+               "Other"
+            ],
+            "required_message":"Please provide an answer"
+           },
            "residence":{
               "type":"radio",
               "required":true,
